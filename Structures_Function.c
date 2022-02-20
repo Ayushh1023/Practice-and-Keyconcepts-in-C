@@ -2,6 +2,7 @@
 #include <string.h>
 struct employee
 {
+    //hehe slight change
     int code;
     float salary;
     char name[30];
