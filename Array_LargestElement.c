@@ -1,0 +1,1 @@
+//Write a function to find out the largest element present in a 5 x 4 matrix. In the same function store the largest element of each row in a 1D array.
