@@ -1,10 +1,12 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main(){
+int main()
+{
     int rating;
     printf("enter your rating(1-5) for tiktok\n");
-    scanf("%d",&rating);
-    switch(rating){
+    scanf("%d", &rating);
+    switch (rating)
+    {
     case 1:
         printf("Your rating is 1\n");
         break;
@@ -24,6 +26,6 @@ int main(){
         printf("Your rating is invalid\n ");
         break;
     }
-    
+
     return 0;
 }

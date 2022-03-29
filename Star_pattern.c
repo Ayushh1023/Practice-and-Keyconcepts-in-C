@@ -1,25 +1,28 @@
-//to print
+// to print
 //*
 //***
 //*****
 
-#include<stdio.h>
+#include <stdio.h>
 void prinfPattern(int n);
-int main(){
-    int n=4;
+int main()
+{
+    int n = 4;
     printPattern(n);
     return 0;
 }
 
-void printPattern(int n){
-    if(n==1){
+void printPattern(int n)
+{
+    if (n == 1)
+    {
         printf("*\n");
         return;
     }
-    printPattern(n-1);
-        for(int i=0;i<((2*n)-1);i++){
-            printf("*");
-        }
-        printf("\n");
-    
+    printPattern(n - 1);
+    for (int i = 0; i < ((2 * n) - 1); i++)
+    {
+        printf("*");
+    }
+    printf("\n");
 }

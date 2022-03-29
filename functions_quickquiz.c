@@ -1,21 +1,25 @@
-#include<stdio.h>
+#include <stdio.h>
 void GoodMorning();
 void GoodAfternoon();
 void GoodNight();
 
-int main(){
+int main()
+{
     GoodMorning();
     GoodAfternoon();
     GoodNight();
     return 0;
 }
 
-void GoodMorning(){
+void GoodMorning()
+{
     printf("Good Morning Ayush\n");
 }
-void GoodAfternoon(){
+void GoodAfternoon()
+{
     printf("Good Afternoon Ayush\n");
 }
-void GoodNight(){
+void GoodNight()
+{
     printf("Good Night Ayush\n");
 }

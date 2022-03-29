@@ -5,8 +5,8 @@ int main()
     // char st[34]; printf("Enter your name::"); gets(st);  printf("The name is "); puts(st); return 0;
     char st[34];
     // printf("Enter your name::");
-    gets(st); 
+    gets(st);
     // printf("The name is ");
-    puts(st); 
+    puts(st);
     return 0;
 }

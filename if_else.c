@@ -1,10 +1,12 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main(){
+int main()
+{
     int age;
     printf("Enter age:");
-    scanf("%d",&age);
-    if(age=90){
+    scanf("%d", &age);
+    if (age = 90)
+    {
         printf("You are age 90, you can't drive");
     }
     // else{

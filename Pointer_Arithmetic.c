@@ -1,5 +1,6 @@
-#include<stdio.h>
-int main(){
+#include <stdio.h>
+int main()
+{
     // int a=34;
     // int *ptr=&a;
     // printf("The value of ptr is::%u\n",ptr);
@@ -7,12 +8,12 @@ int main(){
     // ptr--;
     // printf("The value of ptr is::%u\n",ptr);
 
- char c=34;
-    char *ptr=&c;
-    printf("The value of ptr is::%u\n",ptr);
-    ptr++;   
+    char c = 34;
+    char *ptr = &c;
+    printf("The value of ptr is::%u\n", ptr);
+    ptr++;
     // ptr--;
-    printf("The value of ptr is::%u\n",ptr);
+    printf("The value of ptr is::%u\n", ptr);
 
     return 0;
 }

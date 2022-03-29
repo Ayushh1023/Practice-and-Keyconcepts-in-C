@@ -9,7 +9,7 @@ struct employee
 int main()
 {
     struct employee e1, e2, e3;
-    printf("\n"); 
+    printf("\n");
     printf("\n");
 
     printf("Enter the code of the employee1::");

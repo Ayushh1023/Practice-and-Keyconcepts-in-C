@@ -23,7 +23,7 @@
 
 //     return 0;
 // }
-    
+
 //    #include<stdio.h>
 //    int main(){
 //        int x=0;
@@ -31,7 +31,7 @@
 //        char *ptr=str;
 //        gets(str);
 //        char c='7';
-      
+
 //        while(*ptr!='\0'){
 //            if(*ptr==c){
 //                x++;
@@ -47,8 +47,8 @@
 #include <stdio.h>
 int occur(char str, char src)
 {
-    int x=0;
-    while (str!='\0')
+    int x = 0;
+    while (str != '\0')
     {
         if (str == src)
         {
@@ -60,7 +60,8 @@ int occur(char str, char src)
     return x;
 }
 
-int main() {
+int main()
+{
     char str[] = "shashank";
 
     char src;

@@ -1,7 +1,8 @@
-//ALL PROBLEMS OF CHAPTER 3 PRACTICE SET
-#include<stdio.h>
+// ALL PROBLEMS OF CHAPTER 3 PRACTICE SET
+#include <stdio.h>
 
-int main(){
+int main()
+{
     // -----------------------------------------------FIRST PROBLEM(IF ELSE ANALOGY)---------------------------------------------------
     // int a=10;
     // if(a=11){
@@ -80,16 +81,15 @@ int main(){
     //       97-112=a-z lowercase values ASCII values
     char ch;
     printf("Enter the character\n");
-    scanf("%c",&ch);
-    if(ch<=112&&ch>=97){
-        printf("Hence the %c is in lower case\n",ch);
+    scanf("%c", &ch);
+    if (ch <= 112 && ch >= 97)
+    {
+        printf("Hence the %c is in lower case\n", ch);
     }
-    else{
-        printf("Hence the %c is in upper case\n",ch);
-
+    else
+    {
+        printf("Hence the %c is in upper case\n", ch);
     }
 
     return 0;
-    
-    
 }

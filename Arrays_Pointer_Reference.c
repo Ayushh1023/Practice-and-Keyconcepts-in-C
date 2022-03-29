@@ -7,7 +7,6 @@ int main()
     // int *ptr=&marks[0];
     // int *ptr=marks;
 
-    
     // int *ptr;
     // ptr=&marks[0];
     ptr = marks;
@@ -26,11 +25,11 @@ int main()
     // }
 
     // ---------------using the pointer to print the values-------------
-    
-        for (int i = 4; i > 0; i--)
-        {
-            printf(" %d\n", *(ptr - i));
-        }
-  
+
+    for (int i = 4; i > 0; i--)
+    {
+        printf(" %d\n", *(ptr - i));
+    }
+
     return 0;
 }

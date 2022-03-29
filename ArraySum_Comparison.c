@@ -19,7 +19,7 @@ int large_sum(int *a, int *b, int n)
     }
     if (s2 > s1)
     {
-           return 2;
+        return 2;
     }
 }
 int main()
